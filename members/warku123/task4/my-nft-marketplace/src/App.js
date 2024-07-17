@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ConnectWallet from './components/ConnectWallet';
 import ListNFT from './components/ListNFT';
 import DisplayNFTs from './components/DisplayNFTs';
@@ -10,11 +10,11 @@ function App() {
     <Router>
       <div className="App">
         <ConnectWallet />
-        <Switch>
-          <Route path="/list" component={ListNFT} />
-          <Route path="/display" component={DisplayNFTs} />
-          <Route path="/buy" component={BuyNFT} />
-        </Switch>
+        <Routes>
+          <Route path="/list" element={<ListNFT />} />
+          <Route path="/display" element={<DisplayNFTs />} />
+          <Route path="/buy" element={<BuyNFT />} />
+        </Routes>
       </div>
     </Router>
   );
