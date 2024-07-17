@@ -7,7 +7,7 @@ import { publicProvider } from 'wagmi/providers/public';
 import App from './App';
 import './index.css';
 
-const alchemyApiKey = 'Pp3KHXz4nOdM9cW5-AqUMzFFOylz1xdy'; // 替换为你的Alchemy API Key
+const alchemyApiKey = 'your-alchemy-api-key'; // 替换为你的Alchemy API Key
 
 const { provider, webSocketProvider } = configureChains(defaultChains, [
   alchemyProvider({ apiKey: alchemyApiKey }),
